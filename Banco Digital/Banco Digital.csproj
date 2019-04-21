@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B9D00A1-E568-42EE-B081-9A2031CD65D6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Banco_Digital</RootNamespace>
+    <AssemblyName>Banco Digital</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>banco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admistrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admistrativo.Designer.cs">
+      <DependentUpon>Admistrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deposito.Designer.cs">
+      <DependentUpon>Deposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Saque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saque.Designer.cs">
+      <DependentUpon>Saque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizar_Excluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualizar_Excluir.Designer.cs">
+      <DependentUpon>Visualizar_Excluir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inserir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inserir.Designer.cs">
+      <DependentUpon>Inserir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdministrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAdministrativo.Designer.cs">
+      <DependentUpon>LoginAdministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admistrativo.resx">
+      <DependentUpon>Admistrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deposito.resx">
+      <DependentUpon>Deposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Saque.resx">
+      <DependentUpon>Saque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualizar_Excluir.resx">
+      <DependentUpon>Visualizar_Excluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inserir.resx">
+      <DependentUpon>Inserir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdministrativo.resx">
+      <DependentUpon>LoginAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="banco.ico" />
+    <Content Include="bank.ico" />
+    <None Include="chip-de-poker-de-neon-com-cifrao-conceito-de-jogo-para-o-anuncio-brilhante-da-noite_1262-13540.jpg" />
+    <None Include="cofrinho-com-moeda-de-dolar-dentro-elemento-de-sinal-de-neon-anuncio-brilhante-da-noite_1262-13564.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
